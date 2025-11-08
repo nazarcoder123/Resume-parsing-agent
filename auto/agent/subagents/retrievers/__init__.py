@@ -1,0 +1,1 @@
+from .agent import candidate_details_agent
