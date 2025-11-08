@@ -218,9 +218,5 @@ async def analyze_resumes(request: Request, job_description: str = Body(None)):
 # -------------------------------------------------------------------------------- #
 # Run on localhost:8001
 # -------------------------------------------------------------------------------- #
-# if __name__ == "__main__":
-#     import uvicorn
-#     uvicorn.run("app:app", host="127.0.0.1", port=8001, reload=True)
-
 if __name__ == "__main__":
     mcp.run()
