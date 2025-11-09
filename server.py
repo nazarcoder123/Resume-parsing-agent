@@ -216,8 +216,6 @@ async def analyze_resumes(request: Request, job_description: str = Body(None)):
     raise HTTPException(status_code=500, detail="Unexpected response format from agent")
 
 
-# -------------------------------------------------------------------------------- #
-# Run on localhost:8001
-# -------------------------------------------------------------------------------- #
+
 if __name__ == "__main__":
     mcp.run()
