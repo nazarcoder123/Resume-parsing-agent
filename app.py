@@ -18,7 +18,7 @@ load_dotenv()
 # -------------------------------------------------------------------------------- #
 model = ChatGoogleGenerativeAI(
     model="gemini-2.5-flash",
-    google_api_key=os.getenv("GOOGLE_API_KEY")
+    google_api_key=os.getenv("GEMINI_API_KEY")
 )
 
 # -------------------------------------------------------------------------------- #
@@ -96,7 +96,7 @@ class Context:
 # -------------------------------------------------------------------------------- #
 # Default path for resumes
 # -------------------------------------------------------------------------------- #
-DEFAULT_RESUME_PATH = "E://resumeagent//resume.json"
+DEFAULT_RESUME_PATH = "E://resumeagent//candidates_filtered.json"
 
 # -------------------------------------------------------------------------------- #
 # Tool definition
@@ -218,6 +218,3 @@ async def analyze_resumes(request: Request, job_description: str = Body(None)):
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run("app:app", host="127.0.0.1", port=8001, reload=True)
-    
-    
-    

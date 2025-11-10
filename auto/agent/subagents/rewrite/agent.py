@@ -18,6 +18,6 @@ rephase_jobdescription = Agent(
     model=GEMINI_MODEL,
     instruction=json_instrution,
     description="An AI agent that rephrases and enhances job descriptions for clarity, conciseness, and professional tone.",
-    # output_schema=RephasedDescription, # It Will Return a Json o/p
+    output_schema=RephasedDescription, # It Will Return a Json o/p
     output_key="rephased_job" # This save the output
 )

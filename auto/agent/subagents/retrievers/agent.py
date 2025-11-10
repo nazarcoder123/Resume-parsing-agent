@@ -1,6 +1,6 @@
 from google.adk import Agent
 from .prompt import instructions
-from .tools import extract_candidate_details
+from .tools import analyze_resumes_tool # extract_candidate_details
 from pydantic import BaseModel, Field
 from dotenv import load_dotenv
 
@@ -18,7 +18,7 @@ candidate_details_agent = Agent(
     model=GEMINI_MODEL,
     instruction=instructions,
     description="Execute this tool to get the detail of candidate.",
-    tools=[extract_candidate_details],
+    tools=[analyze_resumes_tool],
     # output_schema=CandidateOutput,
     output_key="candidate_details",
 )
